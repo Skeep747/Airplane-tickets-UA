@@ -1,0 +1,36 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <LangVersion>7.3</LangVersion>
+    <RootNamespace>Airplane_tickets_UA.FrontEnd</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Migrations\20190526163232_Init.cs" />
+    <Compile Remove="Migrations\20190526163232_Init.Designer.cs" />
+    <Compile Remove="Migrations\20190526164149_Init.cs" />
+    <Compile Remove="Migrations\20190526164149_Init.Designer.cs" />
+    <Compile Remove="Migrations\20190526164814_Init.cs" />
+    <Compile Remove="Migrations\20190526164814_Init.Designer.cs" />
+    <Compile Remove="Migrations\20190526165015_Init.cs" />
+    <Compile Remove="Migrations\20190526165015_Init.Designer.cs" />
+    <Compile Remove="Migrations\20190526165322_Init.cs" />
+    <Compile Remove="Migrations\20190526165322_Init.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="2.2.4" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.2.4" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="2.2.4">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Airplane-tickets-UA.Data\Airplane-tickets-UA.Data.csproj" />
+    <ProjectReference Include="..\Airplane-tickets-UA.Shared\Airplane-tickets-UA.Shared.csproj" />
+  </ItemGroup>
+
+</Project>
