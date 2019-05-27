@@ -1,0 +1,24 @@
+@page "/cityeditor"
+@inject MyContext myContext
+
+<h1>City Editor</h1>
+
+<EditForm Model="@city" OnValidSubmit="@HandleValidSubmit">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+
+    <label for="name">Назва міста</label>
+    <InputText id="name" bind-Value="@city.Name" />
+
+    <button type="submit">Додати</button>
+</EditForm>
+
+@functions {
+    private City city = new City();
+
+    private void HandleValidSubmit()
+    {
+        myContext.AddCity(city);
+        city = new City();
+    }
+}

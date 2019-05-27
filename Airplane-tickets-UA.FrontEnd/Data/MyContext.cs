@@ -1,5 +1,6 @@
 ﻿using Airplane_tickets_UA.Data;
 using Microsoft.EntityFrameworkCore;
+using System;
 
 namespace Airplane_tickets_UA.FrontEnd.Data
 {
@@ -14,7 +15,13 @@ namespace Airplane_tickets_UA.FrontEnd.Data
         public DbSet<Client> Clients { get; set; }
         public DbSet<ExistingFlight> ExistingFlights { get; set; }
         public DbSet<Flight> Flights { get; set; }
-        public DbSet<Purchase> Purchases { get; set; }
         public DbSet<Ticket> Tickets { get; set; }
+
+        public void AddCity(City city)
+        {
+            city.Guid = Guid.NewGuid();
+            Cities.Add(city);
+            SaveChangesAsync();
+        }
     }
 }
