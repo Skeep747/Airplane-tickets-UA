@@ -7,10 +7,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Airplane-tickets-UA.Data", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Airplane-tickets-UA.Shared", "Airplane-tickets-UA.Shared\Airplane-tickets-UA.Shared.csproj", "{F8E4DE38-24D9-45D4-BBB4-CB8C48761D6C}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Airplane-tickets-UA.FrontEnd", "Airplane-tickets-UA.FrontEnd\Airplane-tickets-UA.FrontEnd.csproj", "{C2668F44-79ED-42DF-B0E9-53113C2AF13D}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Airplane-tickets-UA.Worker", "Airplane-tickets-UA.Worker\Airplane-tickets-UA.Worker.csproj", "{7E55C702-BAE3-4A11-A194-D39EB54DA90F}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,14 +21,6 @@ Global
 		{F8E4DE38-24D9-45D4-BBB4-CB8C48761D6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F8E4DE38-24D9-45D4-BBB4-CB8C48761D6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F8E4DE38-24D9-45D4-BBB4-CB8C48761D6C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C2668F44-79ED-42DF-B0E9-53113C2AF13D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C2668F44-79ED-42DF-B0E9-53113C2AF13D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C2668F44-79ED-42DF-B0E9-53113C2AF13D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C2668F44-79ED-42DF-B0E9-53113C2AF13D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7E55C702-BAE3-4A11-A194-D39EB54DA90F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7E55C702-BAE3-4A11-A194-D39EB54DA90F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7E55C702-BAE3-4A11-A194-D39EB54DA90F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7E55C702-BAE3-4A11-A194-D39EB54DA90F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
