@@ -16,5 +16,7 @@ namespace Airplane_tickets_UA.Data
         public decimal Price { get; set; }
         public ICAO From { get; set; }
         public ICAO To { get; set; }
+
+        public List<Ticket> Tickets { get; set; } = new List<Ticket>();
     }
 }

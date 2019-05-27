@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace Airplane_tickets_UA.Data
+﻿namespace Airplane_tickets_UA.Data
 {
     public class Airport
     {
