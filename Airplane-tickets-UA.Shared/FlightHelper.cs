@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace Airplane_tickets_UA.Shared
 {
-    internal class FlightHelper
+    public class FlightHelper
     {
         private readonly decimal _discound = 0.85M;
         private readonly decimal _discound60 = 0.90M;
@@ -13,14 +13,14 @@ namespace Airplane_tickets_UA.Shared
 
         private readonly Random random = new Random();
 
-        public delegate void FlightGenerated();
-        public event FlightGenerated FlightGeneratedEvent;
+        public delegate void FlightGeneratorEventHandler();
+        public event FlightGeneratorEventHandler FlightGeneratedEvent;
 
-        public delegate void PriceChanged();
-        public event PriceChanged PriceChangedEvent;
+        public delegate void PriceChangeEventHandler();
+        public event PriceChangeEventHandler PriceChangedEvent;
 
-        public delegate void DiscountActivated();
-        public event DiscountActivated DiscountActivatedEvent;
+        public delegate void DiscountActivatorEventHandler();
+        public event DiscountActivatorEventHandler DiscountActivatedEvent;
 
         private ExistingFlight GenerateFlight(Flight flight)
         {
