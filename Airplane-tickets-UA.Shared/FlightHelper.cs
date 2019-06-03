@@ -1,4 +1,5 @@
 ﻿using Airplane_tickets_UA.Data;
+using Airplane_tickets_UA.Shared.MyDelegates;
 using System;
 using System.Collections.Generic;
 
@@ -13,13 +14,8 @@ namespace Airplane_tickets_UA.Shared
 
         private readonly Random random = new Random();
 
-        public delegate void FlightGeneratorEventHandler();
         public event FlightGeneratorEventHandler FlightGeneratedEvent;
-
-        public delegate void PriceChangeEventHandler();
         public event PriceChangeEventHandler PriceChangedEvent;
-
-        public delegate void DiscountActivatorEventHandler();
         public event DiscountActivatorEventHandler DiscountActivatedEvent;
 
         private ExistingFlight GenerateFlight(Flight flight)
@@ -37,7 +33,7 @@ namespace Airplane_tickets_UA.Shared
                 From = flight.From,
                 To = flight.To
             };
-            
+
             FlightGeneratedEvent?.Invoke();
 
             return GetDiscount(existingFlight, random.Next(1, 10));
@@ -57,7 +53,7 @@ namespace Airplane_tickets_UA.Shared
 
         private List<ExistingFlight> GetSpecialOffer(List<ExistingFlight> existingFlights, int daysLeft)
         {
-            foreach(var existingFlight in existingFlights)
+            foreach (var existingFlight in existingFlights)
             {
                 switch (daysLeft)
                 {
@@ -71,9 +67,8 @@ namespace Airplane_tickets_UA.Shared
                         existingFlight.Price *= _discound1;
                         break;
                 }
+                DiscountActivatedEvent?.Invoke(existingFlight.From, existingFlight.To);
             }
-
-            DiscountActivatedEvent?.Invoke();
 
             return existingFlights;
         }
