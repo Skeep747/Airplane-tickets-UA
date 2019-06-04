@@ -1,0 +1,10 @@
+﻿{
+  "profiles": {
+    "Airplane_tickets_UA.Worker": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "DOTNET_ENVIRONMENT": "Development"
+      }
+    }
+  }
+}
