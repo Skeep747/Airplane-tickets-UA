@@ -12,7 +12,6 @@
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
-Migrations/
 
 # Build results
 [Dd]ebug/
