@@ -1,0 +1,49 @@
+﻿@page "/Flights"
+@using Microsoft.EntityFrameworkCore
+@inject Context Context
+
+<h1>Existing flights list</h1>
+
+@if (flights == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Guid</th>
+                <th>DepartureTime</th>
+                <th>ArrivalTime</th>
+                <th>Seats</th>
+                <th>Price</th>
+                <th>From</th>
+                <th>To</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var flight in flights)
+            {
+                <tr>
+                    <td>@flight.Guid</td>
+                    <td>@flight.DepartureTime</td>
+                    <td>@flight.ArrivalTime</td>
+                    <td>@flight.Seats</td>
+                    <td>@flight.Price</td>
+                    <td>@flight.From</td>
+                    <td>@flight.To</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@functions {
+    Flight[] flights;
+
+    protected override async Task OnInitAsync()
+    {
+        flights = await Context.Flights.ToArrayAsync();
+    }
+}

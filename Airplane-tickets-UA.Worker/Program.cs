@@ -1,9 +1,9 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using Airplane_tickets_UA.Data;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using System.IO;
 
 namespace Airplane_tickets_UA.Worker
 {
@@ -19,6 +19,11 @@ namespace Airplane_tickets_UA.Worker
                 .ConfigureServices(services =>
                 {
                     services.AddHostedService<Worker>();
+                    var configuration = new ConfigurationBuilder()
+                        .SetBasePath(Directory.GetCurrentDirectory())
+                        .AddJsonFile("appsettings.json", false, true)
+                        .Build();
+                    services.AddDbContext<Context>(opt => opt.UseSqlServer(configuration.GetConnectionString("DbConnection")));
                 });
     }
 }
