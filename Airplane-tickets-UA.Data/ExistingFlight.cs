@@ -7,10 +7,10 @@ namespace Airplane_tickets_UA.Data
     {
         public int Id { get; set; }
         public Guid Guid { get; set; }
-        public DateTime DepartureTime { get; set; }
-        public DateTime ArrivalTime { get; set; }
-        public DateTime DepartureDate { get; set; }
-        public DateTime ArrivalDate { get; set; }
+        public string DepartureTime { get; set; }
+        public string ArrivalTime { get; set; }
+        public string DepartureDate { get; set; }
+        public string ArrivalDate { get; set; }
         public int Seats { get; set; }
         public int EmptySeats { get; set; }
         public decimal Price { get; set; }
