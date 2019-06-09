@@ -9,9 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Airplane-tickets-UA.Shared"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Airplane-tickets-UA.Worker", "Airplane-tickets-UA.Worker\Airplane-tickets-UA.Worker.csproj", "{B9421F33-CE2D-4632-8673-7A1B65840F03}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Airplane-tickets-UA-UI", "Airplane-tickets-UA-UI\Airplane-tickets-UA-UI.csproj", "{B940C13A-F728-4C9E-B44E-11F6EA9AC53A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Airplane-tickets-UA.UI", "Airplane-tickets-UA.UI\Airplane-tickets-UA.UI.csproj", "{B940C13A-F728-4C9E-B44E-11F6EA9AC53A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Airplane-tickets-UA-Mugrations", "Airplane-tickets-UA-Mugrations\Airplane-tickets-UA-Mugrations.csproj", "{D0176E04-F514-4BFF-96AD-0432A7B284FE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Airplane-tickets-UA.Migrations", "Airplane-tickets-UA.Migrations\Airplane-tickets-UA.Migrations.csproj", "{8193CFFF-3723-40CE-8BC5-1C821027433F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,10 +35,10 @@ Global
 		{B940C13A-F728-4C9E-B44E-11F6EA9AC53A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B940C13A-F728-4C9E-B44E-11F6EA9AC53A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B940C13A-F728-4C9E-B44E-11F6EA9AC53A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D0176E04-F514-4BFF-96AD-0432A7B284FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D0176E04-F514-4BFF-96AD-0432A7B284FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D0176E04-F514-4BFF-96AD-0432A7B284FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D0176E04-F514-4BFF-96AD-0432A7B284FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8193CFFF-3723-40CE-8BC5-1C821027433F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8193CFFF-3723-40CE-8BC5-1C821027433F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8193CFFF-3723-40CE-8BC5-1C821027433F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8193CFFF-3723-40CE-8BC5-1C821027433F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

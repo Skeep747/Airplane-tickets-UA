@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Airplane_tickets_UA_UI.Data
+namespace Airplane_tickets_UA.UI.Data
 {
     public class DBGenerator
     {

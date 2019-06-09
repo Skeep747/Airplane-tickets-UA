@@ -1,5 +1,5 @@
 using Airplane_tickets_UA.Data;
-using Airplane_tickets_UA_UI.Data;
+using Airplane_tickets_UA.UI.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
@@ -7,7 +7,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
-namespace Airplane_tickets_UA_UI
+namespace Airplane_tickets_UA.UI
 {
     public class Startup
     {
