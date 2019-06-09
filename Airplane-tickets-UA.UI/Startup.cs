@@ -26,7 +26,6 @@ namespace Airplane_tickets_UA.UI
             services.AddRazorPages();
             services.AddServerSideBlazor();
             services.AddSingleton<WeatherForecastService>();
-            services.AddScoped<DBGenerator>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

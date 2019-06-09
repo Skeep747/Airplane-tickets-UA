@@ -15,5 +15,6 @@ namespace Airplane_tickets_UA.Data
         public DbSet<ExistingFlight> ExistingFlights { get; set; }
         public DbSet<Flight> Flights { get; set; }
         public DbSet<Ticket> Tickets { get; set; }
+        public DbSet<Helper> Helpers { get; set; }
     }
 }
