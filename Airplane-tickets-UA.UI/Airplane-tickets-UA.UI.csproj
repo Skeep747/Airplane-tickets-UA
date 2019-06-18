@@ -1,9 +1,9 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.0</TargetFramework>
     <LangVersion>7.3</LangVersion>
-    <RootNamespace>Airplane_tickets_UA_UI</RootNamespace>
+    <RootNamespace>Airplane_tickets_UA.UI</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>

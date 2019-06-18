@@ -11,8 +11,8 @@ namespace Airplane_tickets_UA.Data
         public string Password { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
-        public DateTime Birthday { get; set; }
-        public DateTime RegistrationDate { get; set; }
+        public string Birthday { get; set; }
+        public string RegistrationDate { get; set; }
 
         public List<Ticket> Tickets { get; set; } = new List<Ticket>();
     }

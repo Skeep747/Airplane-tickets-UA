@@ -1,6 +1,6 @@
 using System;
 
-namespace Airplane_tickets_UA_UI.Data
+namespace Airplane_tickets_UA.UI.Data
 {
     public class WeatherForecast
     {

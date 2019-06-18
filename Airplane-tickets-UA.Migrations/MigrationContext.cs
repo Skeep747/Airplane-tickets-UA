@@ -1,12 +1,13 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Airplane_tickets_UA.Data;
+using Microsoft.EntityFrameworkCore;
 
-namespace Airplane_tickets_UA.Data
+namespace Airplane_tickets_UA.Migrations
 {
-    public class Context : DbContext
+    public class MigrationContext : DbContext
     {
-        public Context(DbContextOptions options)
-            : base(options)
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
+            optionsBuilder.UseSqlServer("Server=(localdb)\\MSSQLLocalDB;Database=Airplane_tickets_UA_DB;Trusted_Connection=True;MultipleActiveResultSets=true;");
         }
 
         public DbSet<Airport> Airports { get; set; }

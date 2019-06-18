@@ -12,7 +12,7 @@
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
-Airplane-tickets-UA-Mugrations/
+Migrations/
 
 # Build results
 [Dd]ebug/

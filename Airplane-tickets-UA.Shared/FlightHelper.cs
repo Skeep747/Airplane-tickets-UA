@@ -18,15 +18,15 @@ namespace Airplane_tickets_UA.Shared
         public event PriceChangeEventHandler PriceChangedEvent;
         public event DiscountActivatorEventHandler DiscountActivatedEvent;
 
-        private ExistingFlight GenerateFlight(Flight flight)
+        public ExistingFlight GenerateFlight(Flight flight, int days)
         {
             var existingFlight = new ExistingFlight
             {
                 Guid = Guid.NewGuid(),
                 DepartureTime = flight.DepartureTime,
                 ArrivalTime = flight.ArrivalTime,
-                DepartureDate = DateTime.Today.AddDays(90),
-                ArrivalDate = DateTime.Today.AddDays(90),
+                DepartureDate = DateTime.Now.AddDays(days).ToShortDateString(),
+                ArrivalDate = DateTime.Now.AddDays(days).ToShortDateString(),
                 Seats = flight.Seats,
                 EmptySeats = flight.Seats,
                 Price = flight.Price,
@@ -34,7 +34,7 @@ namespace Airplane_tickets_UA.Shared
                 To = flight.To
             };
 
-            FlightGeneratedEvent?.Invoke();
+            FlightGeneratedEvent?.Invoke(existingFlight);
 
             return GetDiscount(existingFlight, random.Next(1, 10));
         }
@@ -45,13 +45,13 @@ namespace Airplane_tickets_UA.Shared
             {
                 existingFlight.Price *= _discound;
 
-                PriceChangedEvent?.Invoke();
+                PriceChangedEvent?.Invoke(existingFlight);
             }
 
             return existingFlight;
         }
 
-        private List<ExistingFlight> GetSpecialOffer(List<ExistingFlight> existingFlights, int daysLeft)
+        public List<ExistingFlight> GetSpecialOffer(List<ExistingFlight> existingFlights, int daysLeft)
         {
             foreach (var existingFlight in existingFlights)
             {
